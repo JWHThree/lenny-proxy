@@ -32,6 +32,12 @@ app.post('/ask', async (req, res) => {
   }
 });
 
+// ✅ New test route for ReqBin
+app.post('/', (req, res) => {
+  res.json({ reply: "Hi there! I received your message." });
+});
+
 app.listen(port, () => {
   console.log(`Proxy server listening at http://localhost:${port}`);
 });
+
